@@ -5,3 +5,4 @@ Esse projeto visa criar uma calculadora com duas operações básicas de soma e 
 Repositório base.
 
 mais um ramo.
+julia e isadora
