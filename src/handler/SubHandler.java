@@ -37,9 +37,9 @@ public class SubHandler implements HttpHandler{
     }
 
     byte[] calculateSub(String parametro1, String parametro2) {
-        double num1 = Double.parseDouble(parametro1), num2 = Double.parseDouble(parametro2);
+        double numero1 = Double.parseDouble(parametro1), numero2 = Double.parseDouble(parametro2);
 
-        double sub = num1 - num2;
+        double sub = numero1 - numero2;
 
         return Double.toString(sub).getBytes();
     }
