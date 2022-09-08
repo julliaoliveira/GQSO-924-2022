@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: app.TestesSub
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.994 s - in app.TestesSub
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.7 s - in app.TestesSub
