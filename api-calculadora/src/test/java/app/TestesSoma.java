@@ -1,30 +1,19 @@
 package app;
 
-import io.jooby.JoobyTest;
-import io.jooby.StatusCode;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
+import io.jooby.MockRouter;
+import io.jooby.StatusCode;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-@JoobyTest(App.class)
 public class TestesSoma {
 
-  static OkHttpClient client = new OkHttpClient();
-
-  @Test
-  public void somar(int serverPort) throws IOException {
-    Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/soma/4/4")
-        .build();
-
-    try (Response rsp = client.newCall(req).execute()) {
-      assertEquals("8.0", rsp.body().string());
-      assertEquals(StatusCode.OK.value(), rsp.code());
+    @Test
+    public void somar() {
+        MockRouter router = new MockRouter(new App());
+        router.get("/soma/90/90", rsp -> {
+            assertEquals(180.0, rsp.value());
+            assertEquals(StatusCode.OK, rsp.getStatusCode());
+        });
     }
-  }
 }
