@@ -1,4 +1,3 @@
-app.Subtracao$Module
-app.Soma$Module
 app.Index$Module
-
+app.Soma$Module
+app.Subtracao$Module
