@@ -17,7 +17,7 @@ public class IntegrationSoma {
   static OkHttpClient client = new OkHttpClient();
 
   @Test
-  public void somar(int serverPort) throws IOException {
+  public void soma(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/soma/3/4")
         .build();
