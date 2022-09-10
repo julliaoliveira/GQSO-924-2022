@@ -17,7 +17,7 @@ public class IntegrationSub {
   static OkHttpClient client = new OkHttpClient();
 
   @Test
-  public void TestSubtracao(int serverPort) throws IOException {
+  public void TestesSubtracao(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/sub/4/2")
         .build();
